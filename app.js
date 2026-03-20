@@ -42,6 +42,11 @@ app.post('/log', (req, res) => {
 
 wss.on('connection', (ws) => {
     console.log('New WebSocket connection established');
+
+    ws.on('close', () => {
+        console.log('WebSocket connection closed');
+    });
+
 });
 
 wss.on('log', (logs) => {
@@ -51,8 +56,5 @@ wss.on('log', (logs) => {
     })
 });
 
-wss.on('close', () => {
-    console.log('WebSocket connection closed');
-});
 
 
