@@ -46,6 +46,9 @@ wss.on('connection', (ws) => {
 
 wss.on('log', (logs) => {
     console.log('Broadcasting logs to all clients:', logs);
+    wss.clients.forEach((client) => {
+        client.send(JSON.stringify({ type: 'log', data: logs }));
+    })
 });
 
 wss.on('close', () => {
