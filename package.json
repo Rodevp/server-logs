@@ -1,0 +1,25 @@
+{
+  "name": "server-logs",
+  "version": "1.0.0",
+  "description": "node js server logs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodevp/server-logs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Rodevp/server-logs/issues"
+  },
+  "homepage": "https://github.com/Rodevp/server-logs#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "ws": "^8.19.0"
+  }
+}
